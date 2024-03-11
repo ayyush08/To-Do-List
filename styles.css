@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    /* background-color: rgb(33, 25, 81); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 40vw;
+    height: 70vh;
+    border: 2px solid rgb(18, 18, 18);
+    border-radius: 20px;
+background-color: #836fff82;
+}
+
+.container h1{
+    /* color: white; */
+    font-family: sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+.tasks{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.taskInput{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.taskInput button{
+    color: white;
+    background-color: #5cb85c;
+    height: 35px;
+    width: 10em;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-bottom: 2px solid #0056b3; /* Darker shade for 3D effect */
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for click effect */
+}
+
+
+button:active {
+    border-bottom: 1px solid #0056b3; /* Simulate button press */
+    transform: translateY(3px);
+    scale: 0.8; /* Move button down */
+}
+#taskInput{
+    height: 35px;
+    width: 25rem;
+    border-radius: 8px;
+    border: none;
+    background-color: whitesmoke;
+    padding: 0 10px;
+}
+
+
+.task{
+    height: 23px;
+    width: 35rem;
+    border-radius: 8px;
+    border: 2px solid black;
+    padding: 0 10px;
+    background-color: #F0F3FF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+
+
+/* .task :nth-child(2){
+    margin: 10px 0;
+
+} */
+
+
+/* Style for custom checkbox */
+.custom-checkbox {
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+}
+
+  /* Hide the checkbox */
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+  /* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #9b9b9ba3;
+    border-radius: 4px;
+    }
+    
+  /* On mouse-over, add a grey background color */
+.custom-checkbox:hover input ~ .checkmark {
+    background-color: #a5a4a4;
+}
+
+  /* When the checkbox is checked, add a blue background */
+.custom-checkbox input:checked ~ .checkmark {
+    background-color: #1bc226;
+}
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+  /* Show the checkmark when checked */
+.custom-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+  /* Style the checkmark/indicator */
+.custom-checkbox .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+.taskText{
+    text-decoration: line-through;
+}
+
+.delete{
+    background-color: red;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for click effect */
+}
+
+
+#taskInput::placeholder{
+    font-style: italic;
+    opacity: 0.9;
+
+}
+
+#taskInput:focus{
+    outline: 2px solid black;
+}
